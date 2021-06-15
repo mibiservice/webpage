@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +10,24 @@
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="static/css/pricing-plan.css">
-  <link rel="stylesheet" type="text/css" href="static/css/animate.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/fonts.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/flaticon.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/font-awesome.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/owl.carousel.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/owl.theme.default.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/dropify.min.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/jquery-ui.min.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/magnific-popup.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/nice-select.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/responsive.css" />
-  <link rel="stylesheet" type="text/css" href="static/css/custom.css" />
-  <!--favicon-->
-  <link rel="shortcut icon" type="image/png" href="static/img/Logo-small.png" />
+  <link rel="stylesheet" type="text/css" href="{% static '/css/pricing-plan.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/flaticon.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/dropify.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/jquery-ui.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/magnific-popup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/nice-select.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/responsive.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/custom.css' %}">
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="{% static '/img/Logo-small.png' %}" />
   <link rel="icon" href="logo-small.png">
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -49,24 +51,24 @@
   >
     <h2>
       <a href="https://mibiservice.com/">
-        <span><img src="static/img/Logo.png" alt="img" /></span
+        <span><img src="{% static '/img/Logo.png' %}" alt="img" /></span
       ></a>
     </h2>
 
     <a href="#0" class="cd-close">Close</a>
     <ul class="cd-dropdown-content">
       <li class="">
-        <a href="index.html">home</a>
+        <a href="{% url 'index' %}">home</a>
       </li>
       <li class="">
-        <a href="partners.html">our partners</a>
+        <a href="{% url 'partners' %}">our partners</a>
       </li>
       <!-- <li class="">
         <a href="#">blog</a>
       </li> -->
-      <li><a href= "price.html">Pricing</a></li>
-      <li><a href="about_us.html">about</a></li>
-      <li><a href="contact_us.html">contact us</a></li>
+            <li><a href="{% url 'pricing' %}">Pricing</a></li>
+            <li><a href="{% url 'about_us' %}">About Us</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
     </ul>
   </nav>
   <div
@@ -74,7 +76,7 @@
   >
     <div class="cp_logo_wrapper index_2_logo index_3_logo">
       <a href="https://mibiservice.com/">
-        <img src="static/img/Logo.png" alt="logo" style="height: 50px" />
+        <img src="{% static '/img/Logo.png' %}" alt="logo" style="height: 50px" />
       </a>
     </div>
     <!--<header
@@ -148,37 +150,27 @@
         <ul>
           <li class="btn_hover">
             <a
-              href="forms.html"
+              href="{% url 'forms' %}"
               >Join now</a
             >
           </li>
         </ul>
       </div>
+      <div class="mainmenu green_main_menu blue_main_menu d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                <ul class="main_nav_ul menu_2_ul">
+                    <li><a href="{% url 'index' %}" class="gc_main_navigation active_class active_class2 active_class3">home</a>
+                    </li>
+                    <li><a href="{% url 'partners' %}" class="gc_main_navigation">our partners</a>
+                    </li>
+                              <!-- <li><a href="#" class="gc_main_navigation">blog </a>
+                    </li> -->
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                              <li><a href="{% url 'about_us' %}" class="gc_main_navigation">About Us</a>
+                    </li>
+                   <li><a href="{% url 'contact_us' %}" class="gc_main_navigation">contact us</a></li>
 
-      <div
-        class="mainmenu green_main_menu blue_main_menu d-xl-block d-lg-block d-md-none d-sm-none d-none"
-      >
-        <ul class="main_nav_ul menu_2_ul">
-          <li><a href="index.html" class="gc_main_navigation">home</a></li>
-          <li>
-            <a
-              href="partners.html"
-              class="gc_main_navigation"
-              >our partners</a
-            >
-          </li>
-          <!-- <li><a href="#" class="gc_main_navigation">blog </a></li> -->
-          <li><a href="price.html" class="gc_main_navigation">Pricing</a></li>
-          <li>
-            <a href="about_us.html" class="gc_main_navigation">about</a>
-          </li>
-          <li>
-            <a href="contact_us.html" class="gc_main_navigation"
-              >contact us</a
-            >
-          </li>
-        </ul>
-      </div>
+                </ul>
+            </div>
     </div>
   </div>
 
@@ -227,7 +219,7 @@
               <h3 class=" pricing-plan-cost ml-auto">I am a partner</p>
               <p class="pricing-plan-title">Support Us and be our partner</p>
 
-              <a href="partner_form.html" class="btn pricing-plan-purchase-btn">Register as Partners</a>
+              <a href="{% url 'reg_partner' %}" class="btn pricing-plan-purchase-btn">Register as Partners</a>
             </div>
           </div>
         </div>
@@ -240,7 +232,7 @@
 
               <h3 class="pricing-plan-cost ml-auto">I am a Worker</h3>
               <p class="pricing-plan-title">Get a nice-paying job quickly with proper documentation </p>
-              <a href="workers.html" class="btn pricing-plan-purchase-btn">Register as Worker</a>
+              <a href="{% url 'reg_worker' %}" class="btn pricing-plan-purchase-btn">Register as Worker</a>
             </div>
           </div>
         </div>
@@ -251,7 +243,7 @@
               <span class="iconify pricing-plan-icon" data-icon="clarity:employee-solid" data-inline="false"></span>
               <h3 class="pricing-plan-S ml-auto">I am a Recruiter</h3>
               <p class="pricing-plan-title">Post a job and hire as many workers as you want</p>
-              <a href="recruiter.html" class="btn pricing-plan-purchase-btn">Register as Recruiter</a>
+              <a href="{% url 'reg_recruiter' %}" class="btn pricing-plan-purchase-btn">Register as Recruiter</a>
             </div>
           </div>
         </div>
@@ -261,20 +253,21 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script src="static/js/jquery-3.3.1.min.js"></script>
-  <script src="static/js/bootstrap.min.js"></script>
-  <script src="static/js/modernizr.js"></script>
-  <script src="static/js/jquery.menu-aim.js"></script>
-  <script src="static/js/plugin.js"></script>
-  <script src="static/js/owl.carousel.js"></script>
-  <script src="static/js/jquery-ui.js"></script>
-  <script src="static/js/jquery.countTo.js"></script>
-  <script src="static/js/jquery.magnific-popup.js"></script>
-  <script src="static/js/dropify.min.js"></script>
-  <script src="static/js/jquery.inview.min.js"></script>
-  <script src="static/js/jquery.nice-select.min.js"></script>
-  <script src="static/js/imagesloaded.pkgd.min.js"></script>
-  <script src="static/js/isotope.pkgd.min.js"></script>
-  <script src="static/js/custom.js"></script>
+    <script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/modernizr.js' %}"></script>
+    <script src="{% static '/js/jquery.menu-aim.js' %}"></script>
+    <script src="{% static '/js/plugin.js' %}"></script>
+    <script src="{% static '/js/owl.carousel.js' %}"></script>
+    <script src="{% static '/js/jquery-ui.js' %}"></script>
+    <script src="{% static '/js/jquery.countTo.js' %}"></script>
+    <script src="{% static '/js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static '/js/dropify.min.js' %}"></script>
+    <script src="{% static '/js/jquery.inview.min.js' %}"></script>
+    <script src="{% static '/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static '/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static '/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/js/custom.js' %}"></script>
 </body>
 </html>
+
