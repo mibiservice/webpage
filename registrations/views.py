@@ -9,6 +9,9 @@ from django.views.decorators.csrf import csrf_exempt
 def pricing(request):
     return render(request, 'price.html')
 
+def forms(request):
+    return render(request, 'forms.html')
+
 @csrf_exempt
 def success(request):
     return render(request, 'success.html')
