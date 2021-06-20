@@ -12,4 +12,7 @@ urlpatterns = [
 	path('partners/', views.partners, name = "partners"),
 	path('', views.index, name = "index"),
 	path('join_us/', views.join_us, name = "join_us"),
+	path('success/', views.success, name = "success"),
+	path('terms/', views.terms, name = "terms"),
+	path('refund_policy/', views.refund_policy, name = "refund_policy")
 ]

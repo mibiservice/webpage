@@ -77,7 +77,7 @@
     class="cd-dropdown cd_dropdown_index2 cd_dropdown_index3 d-block d-sm-block d-md-block d-lg-none d-xl-none"
   >
     <h2>
-      <a href="https://mibiservice.com/">
+      <a href="{% url 'index' %}">
         <span><img src="{% static '/img/Logo.png' %}" alt="img" /></span
       ></a>
     </h2>
@@ -102,7 +102,7 @@
     class="cp_navi_main_wrapper index_2_top_header index_3_top_header jb_cover"
   >
     <div class="cp_logo_wrapper index_2_logo index_3_logo">
-      <a href="https://mibiservice.com/">
+      <a href="{% url 'index' %}">
         <img src="{% static '/img/Logo.png' %}" alt="logo" style="height: 50px" />
       </a>
     </div>
@@ -310,7 +310,7 @@
     <div class="close">X</div>
     <h3 class="card-title">Proceed Further</h3>
     <p class="card-text"> You are just one step away to begin your journey with us</p>
-     <a href="#" class="btn btn-warning" role="button" id="pop-form">Pay via razorPay</a>
+     <a href="{% url 'reg_worker' %}" class="btn btn-warning" role="button" id="pop-form">Pay via razorPay</a>
 
 </div>
 
@@ -333,7 +333,6 @@
     });
     /*document.getElementById('button').addEventListener("click", function() {
       document.querySelector('#bod-cont').style.background-color = "black";
-
     });*/
 
     document.querySelector('.close').addEventListener("click", function() {
