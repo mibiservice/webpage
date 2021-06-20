@@ -9,6 +9,12 @@ from django.views.decorators.csrf import csrf_exempt
 def pricing(request):
     return render(request, 'price.html')
 
+def terms(request):
+    return render(request, 'terms.html')
+
+def refund_policy(request):
+    return render(request, 'refund_policy.html')
+
 def forms(request):
     return render(request, 'forms.html')
 
@@ -18,11 +24,15 @@ def success(request):
 
 def price_worker(request):
     if request.method == 'POST':
-        amount = 1200
-        order_currency = 'INR' 
-        client=razorpay.Client(
-            auth=('rzp_live_qn1mOPoha8nwg6','ePVRjPHnMNSsrEM8vk14AGVg'))
-        payment=client.order.create({'amount':amount,'currency':'INR','payment_capture':'1'})
+        if request.POST.get('terms') == 'terms_and_conditions':
+            print('hello')
+            print(request.POST.get('terms'))
+            amount = 1200
+            order_currency = 'INR' 
+            client=razorpay.Client(auth=('rzp_live_qn1mOPoha8nwg6','ePVRjPHnMNSsrEM8vk14AGVg'))
+            payment=client.order.create({'amount':amount,'currency':'INR','payment_capture':'1'})
+        else:
+            messages.success(request, 'Please accept the terms and conditions. ')
     return render(request, 'price_worker.html')
 
 def about_us(request):
@@ -150,8 +160,6 @@ def register_worker(request):
                         continue
                     else:
                         work_loc=work_loc+p+','
-                print('Catogory list=',Categories_list)
-                print('Preferred_Work_Location_list=',Preferred_Work_Location_list)
                 NewWorker = Worker_model.objects.create(Name = Name, Phone_Number = Phone_Number, Email = Email, Address_line1 = Address_line1, State = State, City = City,Categories=cat_list, Education_Level = edu_level, Minimum_Expected_Salary = Minimum_Expected_Salary, Date_of_Birth = Date_of_Birth,Preferred_Work_Location=work_loc, Previous_Work_Experience = Previous_Work_Experience)
                 NewWorker.save()
                 messages.success(request, 'Account was created for ' + username)
