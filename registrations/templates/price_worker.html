@@ -84,7 +84,7 @@
 
 
   
-      <form class="text-centre border-light p-5" action="success" method="POST">
+      <form class="text-centre border-light p-5" action="{% url 'success' %}" method="POST">
               {% csrf_token %}
             <p>
               <!-- <label>
