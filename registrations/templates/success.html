@@ -167,7 +167,7 @@
                     </li>
                               <!-- <li><a href="#" class="gc_main_navigation">blog </a>
                     </li> -->
-                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                    <li><a href="{% url 'pricing' %}" class="gc_main_navigation" >Pricing</a></li>
                               <li><a href="{% url 'about_us' %}" class="gc_main_navigation">About Us</a>
                     </li>
                    <li><a href="{% url 'contact_us' %}" class="gc_main_navigation">contact us</a></li>
@@ -181,7 +181,7 @@
   <h1>Registration Successful.</h1>
   <p>Payment received</p>
   <p class="lead">
-<button type="button" class="btn btn-warning">Go To Home Page</button>
+<a type="button" href="{% url 'index' %}" class="btn btn-warning " role="button">Go To Home Page</a>
   </p>
 </div>
 
