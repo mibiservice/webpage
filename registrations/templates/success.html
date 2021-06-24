@@ -1,19 +1,208 @@
+{% load static %}
 
 <!DOCTYPE html>
-<html>
-<head>
-
-    <!-- Required meta tags -->
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MiBi</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="static/img/Logo-small.png" />
+    <link rel="icon" href="logo-small.png">
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/pricing-plan.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/flaticon.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/dropify.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/jquery-ui.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/magnific-popup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/nice-select.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/responsive.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/custom.css' %}">
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="{% static '/img/Logo-small.png' %}" />
+  <link rel="icon" href="logo-small.png">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  </head>
 
-    
+  <body>
+  <div class="jb_preloader">
+    <div class="spinner_wrap">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  <div class="cursor cursor2 cursor3"></div>
+  <!-- Top Scroll Start --><a
+    href="javascript:"
+    id="return-to-top"
+    class="return_top3"
+    ><i class="fas fa-angle-double-up"></i
+  ></a>
+  <nav
+    class="cd-dropdown cd_dropdown_index2 cd_dropdown_index3 d-block d-sm-block d-md-block d-lg-none d-xl-none"
+  >
+    <h2>
+      <a href="{% url 'index' %}">
+        <span><img src="{% static '/img/Logo.png' %}" alt="img" /></span
+      ></a>
+    </h2>
 
-</head>
-<body>
-    <h1>Registration Successful. Payment received.</h1>
-</body>
+    <a href="#0" class="cd-close">Close</a>
+    <ul class="cd-dropdown-content">
+      <li class="">
+        <a href="{% url 'index' %}">home</a>
+      </li>
+      <li class="">
+        <a href="{% url 'partners' %}">our partners</a>
+      </li>
+      <!-- <li class="">
+        <a href="#">blog</a>
+      </li> -->
+            <li><a href="{% url 'pricing' %}">Pricing</a></li>
+            <li><a href="{% url 'about_us' %}">About Us</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div
+    class="cp_navi_main_wrapper index_2_top_header index_3_top_header jb_cover"
+  >
+    <div class="cp_logo_wrapper index_2_logo index_3_logo">
+      <a href="{% url 'index' %}">
+        <img src="{% static '/img/Logo.png' %}" alt="logo" style="height: 50px" />
+      </a>
+    </div>
+    <!--<header
+      class="mobail_menu d-block d-sm-block d-md-block d-lg-none d-xl-none"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="cd-dropdown-wrapper">
+              <a class="house_toggle" href="#0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Capa_1"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 31.177 31.177"
+                  style="enable-background: new 0 0 31.177 31.177"
+                  xml:space="preserve"
+                  width="25px"
+                  height="25px"
+                >
+                  <g>
+                    <g>
+                      <path
+                        class="menubar"
+                        d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z"
+                        fill="#004165"
+                      />
+                    </g>
+                    <g>
+                      <path
+                        class="menubar"
+                        d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z"
+                        fill="#004165"
+                      />
+                    </g>
+                    <g>
+                      <path
+                        class="menubar"
+                        d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z"
+                        fill="#004165"
+                      />
+                    </g>
+                    <g>
+                      <path
+                        class="menubar"
+                        d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z"
+                        fill="#004165"
+                      />
+                    </g>
+                    <g>
+                      <path
+                        class="menubar"
+                        d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z"
+                        fill="#004165"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>-->
+
+    <div class="jb_navigation_wrapper index_2_right_menu index_3_right_menu">
+      <div class="posting_job">
+        <ul>
+          <li class="btn_hover">
+            <a
+              href="{% url 'forms' %}"
+              >Join now</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="mainmenu green_main_menu blue_main_menu d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                <ul class="main_nav_ul menu_2_ul">
+                    <li><a href="{% url 'index' %}" class="gc_main_navigation ">home</a>
+                    </li>
+                    <li><a href="{% url 'partners' %}" class="gc_main_navigation">our partners</a>
+                    </li>
+                              <!-- <li><a href="#" class="gc_main_navigation">blog </a>
+                    </li> -->
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                              <li><a href="{% url 'about_us' %}" class="gc_main_navigation">About Us</a>
+                    </li>
+                   <li><a href="{% url 'contact_us' %}" class="gc_main_navigation">contact us</a></li>
+
+                </ul>
+            </div>
+    </div>
+  </div>
+
+    <div class="jumbotron">
+  <h1>Registration Successful.</h1>
+  <p>Payment received</p>
+  <p class="lead">
+<button type="button" class="btn btn-warning">Go To Home Page</button>
+  </p>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/modernizr.js' %}"></script>
+    <script src="{% static '/js/jquery.menu-aim.js' %}"></script>
+    <script src="{% static '/js/plugin.js' %}"></script>
+    <script src="{% static '/js/owl.carousel.js' %}"></script>
+    <script src="{% static '/js/jquery-ui.js' %}"></script>
+    <script src="{% static '/js/jquery.countTo.js' %}"></script>
+    <script src="{% static '/js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static '/js/dropify.min.js' %}"></script>
+    <script src="{% static '/js/jquery.inview.min.js' %}"></script>
+    <script src="{% static '/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static '/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static '/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/js/custom.js' %}"></script>
+
+  </body>
 </html>
