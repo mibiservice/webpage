@@ -52,10 +52,6 @@ class Work_Loc(models.Model):
     def __str__(self):
         return self.name
 
-
-
-
-
 class Worker_model(models.Model):
     Name = models.CharField(max_length=100, null=True)
     Phone_Number = models.CharField(max_length = 10, null=True)

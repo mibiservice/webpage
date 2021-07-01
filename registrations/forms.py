@@ -24,8 +24,6 @@ CATEGORY = [
             ('Textile', 'Textile'),
             ('Other', 'Other'),
 
-
-
 ]
 
 WORK_LOC = [
@@ -82,10 +80,14 @@ class WorkerForm(forms.Form):
     Date_of_Birth = forms.CharField(max_length=50)
     Preferred_Work_Location = forms.CharField(max_length=50)
     Previous_Work_Experience = models.CharField(max_length=1000)
+
 class Worker1Form(ModelForm):
 	class Meta:
 		model = Worker_model
 		fields = '__all__'
     
+class RecruiterPaymentForm(forms.Form):
+    name = forms.CharField(max_length=100, required = True)
+    amount = forms.IntegerField(required = True)
 
 

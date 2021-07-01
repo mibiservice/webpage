@@ -30,10 +30,31 @@ def price_worker(request):
             amount = 1200
             order_currency = 'INR' 
             client=razorpay.Client(auth=('rzp_live_qn1mOPoha8nwg6','ePVRjPHnMNSsrEM8vk14AGVg'))
-            payment=client.order.create({'amount':amount,'currency':'INR','payment_capture':'1'})
+            payment=client.order.create({'amount':str(amount),'currency':'INR','payment_capture':'1'})
         else:
             messages.success(request, 'Please accept the terms and conditions. ')
     return render(request, 'price_worker.html')
+
+def price_recruiter(request, pk):
+    print('Hellooooooo', pk)
+    amount = pk * 100
+    context = {'amount': amount}
+    if request.method == 'POST':
+        amount = amount
+        order_currency = 'INR' 
+        client=razorpay.Client(auth=('rzp_live_qn1mOPoha8nwg6','ePVRjPHnMNSsrEM8vk14AGVg'))
+        payment=client.order.create({'amount':amount,'currency':'INR','payment_capture':'1'})
+        context = {'amount', amount}
+    return render(request, 'price_recruiter.html', context)
+
+def recruiter_payment_form(request):
+    form = RecruiterPaymentForm()
+    if request.method == 'POST':
+        form = RecruiterPaymentForm(request.POST)
+        amount = request.POST.get('amount')
+        pk = amount
+        return redirect('recruiter_payment', pk)
+    return render(request, 'recruiter_payment_form.html')
 
 def about_us(request):
     return render(request, 'about_us.html')
@@ -66,7 +87,7 @@ def register_recruiter(request):
                     username = form.cleaned_data.get('name')
                     context = {'form':form, 'name': username}
                     messages.success(request, 'Account was created for ' + username)
-                    return redirect('reg_recruiter')
+                    return redirect('recruiter_payment_form')
             else:
                 messages.success(request, f'Email already exists')
         else:
