@@ -14,5 +14,7 @@ urlpatterns = [
 	path('join_us/', views.join_us, name = "join_us"),
 	path('success/', views.success, name = "success"),
 	path('terms/', views.terms, name = "terms"),
+	path('recruiter_payment/<int:pk>/', views.price_recruiter, name = "recruiter_payment"),
+	path('recruiter_payment_form/', views.recruiter_payment_form, name = "recruiter_payment_form"),
 	path('refund_policy/', views.refund_policy, name = "refund_policy")
 ]
